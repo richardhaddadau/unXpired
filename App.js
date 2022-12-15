@@ -3,16 +3,14 @@ import { StyleSheet, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "./assets/screens/HomeScreen";
+import StackNavigator from "./assets/Navigation/StackNavigator";
 
 const Tabs = createBottomTabNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Tabs.Navigator>
-        <Tabs.Screen name={"Home"} component={HomeScreen} />
-        <Tabs.Screen name={"List"} component={HomeScreen} />
-      </Tabs.Navigator>
+      <StackNavigator />
     </NavigationContainer>
   );
 }

@@ -1,9 +1,15 @@
 import { Text, View } from "react-native";
+import { useState } from "react";
+import StartApp from "../Components/StartApp";
+import StartScan from "../Components/StartScan";
 
 const HomeScreen = () => {
+  // States
+  const [scanOpen, setScanOpen] = useState(false);
+
   return (
     <View>
-      <Text>hello</Text>
+      {scanOpen ? <StartScan /> : <StartApp openScan={setScanOpen} />}
     </View>
   );
 };
